@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>New Year Greetings 🎉</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Georgia, serif;
+    color: #ffffff;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .box {
+    padding: 25px;
+    max-width: 700px;
+  }
+
+  .open-btn {
+    padding: 15px 38px;
+    font-size: 20px;
+    border: none;
+    border-radius: 30px;
+    background: #f5c542;
+    color: #000;
+    cursor: pointer;
+    animation: pulse 1.5s infinite;
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+  }
+
+  .surprise {
+    display: none;
+    animation: fadeIn 1.6s forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  h1 {
+    font-size: 38px;
+    margin: 12px 0;
+  }
+
+  h2 {
+    font-size: 26px;
+    color: #ffd700;
+    margin-bottom: 6px;
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  .from {
+    margin-top: 30px;
+    font-size: 18px;
+    opacity: 0.95;
+  }
+</style>
+</head>
+
+<body>
+
+<!-- Background Music (Soft Instrumental) -->
+<audio id="bgMusic" loop>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+</audio>
+
+<div class="box" id="startBox">
+  <button class="open-btn" onclick="openSurprise()">🎁 Open Greeting</button>
+</div>
+
+<div class="box surprise" id="surpriseBox">
+  <h2>Government Engineering College, Sheikhpura</h2>
+  <h1>🌸 Happy New Year 2026 🌸</h1>
+
+  <p>
+    Respected Faculty Members,<br><br>
+    On the occasion of the New Year,<br>
+    I extend my sincere gratitude and best wishes to you.<br><br>
+    May this year bring good health,<br>
+    professional fulfillment,<br>
+    and continued success in guiding and inspiring students.
+  </p>
+
+  <div class="from">
+    With respectful regards,<br>
+    <b>Prince Kumar</b><br>
+    Student, GEC Sheikhpura
+  </div>
+</div>
+
+<script>
+function openSurprise() {
+  document.getElementById("startBox").style.display = "none";
+  document.getElementById("surpriseBox").style.display = "block";
+  document.getElementById("bgMusic").play();
+}
+</script>
+
+</body>
+</html>
